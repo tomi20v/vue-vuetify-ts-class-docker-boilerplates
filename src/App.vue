@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <v-main>
-      <HelloWorld />
+      <HelloWorld some-prop="prop injected"/>
     </v-main>
   </v-app>
 </template>

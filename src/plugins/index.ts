@@ -6,10 +6,10 @@
 
 // Plugins
 import vuetify from './vuetify'
-
-// Types
-import type { App } from 'vue'
+import type {App} from "vue";
+import vuex from "./vuex";
 
 export function registerPlugins (app: App) {
-  app.use(vuetify)
+  app.use(vuetify);
+  app.use(vuex);
 }

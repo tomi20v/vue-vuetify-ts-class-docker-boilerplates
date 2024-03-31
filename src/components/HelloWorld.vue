@@ -13,7 +13,10 @@
           </v-card>
         </v-dialog>
       </section>
-
+      <section>
+        <p>count = {{ count }}</p>
+        <v-btn @click="increase">push me too</v-btn>
+      </section>
     </v-card-text>
   </v-card>
 </template>
@@ -21,12 +24,21 @@
 <script lang="ts">
 
 import {Component, Prop, Vue} from 'vue-facing-decorator'
+import {namespace} from "vuex-facing-decorator";
+
+const sampleModule = namespace('sampleModule');
 
 @Component
 export default class HelloWorld extends Vue {
 
   @Prop()
   someProp!: string;
+
+  @sampleModule.Action('increase')
+  increase: () => void;
+
+  @sampleModule.Getter('count')
+  count!: number;
 
   showing: boolean = false;
 

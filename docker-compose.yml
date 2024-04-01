@@ -4,7 +4,7 @@ services:
     build:
       context: .
       dockerfile: ./docker/Dockerfile
-    container_name: vue-vuetify-boilerplate
+    container_name: vue-vuetify-storybook-boilerplate
     # uncomment following line to start container in dev mode with hot reload
 #    command: [ "npm", "run", "serve" ]
     tty: true

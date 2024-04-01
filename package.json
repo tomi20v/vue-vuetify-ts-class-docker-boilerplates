@@ -1,6 +1,12 @@
 {
   "name": "vue-vuetify-ts-class-docker-boilerplates",
   "version": "0.0.0",
+  "private": true,
+  "main": "dist/index.esm.js",
+  "ttypings": "dist/index.d.ts - we should have this probably",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "rimraf dist && rm -f packagename-here.* && npm run build:lib && npm run build:pack",

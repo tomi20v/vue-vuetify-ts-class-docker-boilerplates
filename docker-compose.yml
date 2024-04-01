@@ -1,6 +1,6 @@
 version: "3.6"
 services:
-  bonomo3:
+  vue-vuetify-ts-class-docker-boilerplates:
     build:
       context: .
       dockerfile: ./docker/Dockerfile

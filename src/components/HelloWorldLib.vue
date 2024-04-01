@@ -26,7 +26,7 @@
 import {Component, Prop, Vue} from 'vue-facing-decorator'
 
 @Component
-export default class HelloWorld extends Vue {
+export default class HelloWorldLib extends Vue {
 
   @Prop()
   someProp!: string;

@@ -1,5 +1,5 @@
-import HelloWorld from "./components/HelloWorld.vue"
+import HelloWorldLib from "./components/HelloWorldLib.vue"
 
 export {
-  HelloWorld,
+  HelloWorldLib,
 }

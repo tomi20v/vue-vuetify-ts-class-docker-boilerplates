@@ -15,8 +15,11 @@ export default defineConfig({
   build: {
     lib: {
       entry: path.resolve(__dirname, 'src/index.ts'),
-      // formats: ['es'],
-      formats: ['esm'],
+      formats: [
+        'es',
+        'esm',
+        'umd',
+      ],
       // #INSTALL change these names
       name: 'vue-vuetify-lib',
       // fileName: 'vue-vuetify-lib',
@@ -31,9 +34,14 @@ export default defineConfig({
         // 'vuex-facing-decorator',
       ],
       output: {
+        // file: 'dist/index.js',
+        // entryFileNames: [],
+        // format: 'esm',
         globals: {
           vue: 'Vue',
-        },
+          vuetify: "Vuetify",
+          'vuetify/components': 'VuetifyComponents',
+          'vuetify/directives': 'VuetifyDirectives',        },
         // sourcemap: "inline"
         // sourcemap: true
       },

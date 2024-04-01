@@ -27,8 +27,8 @@ export default defineConfig({
         'vue',
         'vuetify',
         'vue-facing-decorator',
-        'vuex',
-        'vuex-facing-decorator',
+        // 'vuex',
+        // 'vuex-facing-decorator',
       ],
       output: {
         globals: {

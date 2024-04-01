@@ -24,9 +24,6 @@
 <script lang="ts">
 
 import {Component, Prop, Vue} from 'vue-facing-decorator'
-// import {namespace} from "vuex-facing-decorator";
-
-// const sampleModule = namespace('sampleModule');
 
 @Component
 export default class HelloWorld extends Vue {
@@ -34,11 +31,10 @@ export default class HelloWorld extends Vue {
   @Prop()
   someProp!: string;
 
-  // @sampleModule.Action('increase')
-  // increase: () => void;
-  increase() {}
+  increase() {
+    this.count++;
+  }
 
-  // @sampleModule.Getter('count')
   count!: number;
 
   showing: boolean = false;

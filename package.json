@@ -3,12 +3,13 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc --noEmit && vite build",
+    "build": "rimraf dist && rm -f packagename-here.* && npm run build:lib && npm run build:pack",
+    "build:lib": "vue-tsc --noEmit && vite build",
+    "build:pack": "npm pack",
     "build:storybook": "storybook build",
     "preview": "vite preview",
-    "serve": "vite",
-    "serve:storybook": "storybook dev -p 6006",
-    "start": "vite preview"
+    "serve": "storybook dev -p 6006",
+    "start": "storybook dev -p 6006"
   },
   "dependencies": {
     "@mdi/font": "6.2.95",

@@ -6,6 +6,7 @@ services:
       dockerfile: ./docker/Dockerfile
     container_name: vue-vuetify-storybook-boilerplate
     # uncomment following line to start container in dev mode with hot reload
+    # note in "lib" flavor there is just one mode which runs storybook so this does not make sense/does anything
 #    command: [ "npm", "run", "serve" ]
     tty: true
     volumes:

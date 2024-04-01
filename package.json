@@ -1,10 +1,11 @@
 {
-  "name": "bonomo",
+  "name": "vue-vuetify-ts-class-docker-boilerplates",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite --host",
     "build": "vue-tsc --noEmit && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "start": "vite preview"
   },
   "dependencies": {
     "@mdi/font": "6.2.95",

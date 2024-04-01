@@ -1,14 +1,13 @@
 version: "3.6"
 services:
   bonomo3:
-    image: node:20-alpine
-#    build:
-#      context: .
-    working_dir: /app/
-    entrypoint: /bin/ash
+    build:
+      context: .
+      dockerfile: ./docker/Dockerfile
+    container_name: vue-vuetify-boilerplate
     ports:
-#      - 6006:6006
-      - 6007:6007
+      - 3000:3000
+    tty: true
     volumes:
       - .:/app/
-    tty: true
+    working_dir: /app/

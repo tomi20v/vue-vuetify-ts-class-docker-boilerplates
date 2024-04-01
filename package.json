@@ -1,17 +1,23 @@
 {
-  "name": "vue-vuetify-ts-class-docker-boilerplates",
-  "version": "0.0.0",
+  "name": "vue-vuetify-lib",
+  "version": "0.0.9",
   "private": true,
-  "main": "./dist/index.umd.js",
-  "module": "./dist/index.esm.js",
-  "exports": {
+  "main": "dist/index.js",
+  "_module": "./dist/index.js",
+  "_exports": {
     ".": {
       "import": "./dist/index.esm.js",
       "require": "./dist/index.umd.js"
     }
   },
-  "ttypings": "dist/index.d.ts - we should have this probably",
-  "files": [ "dist" ],
+  "__exports": {
+    ".": "./dist/index.esm.js"
+  },
+  "type": "module",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "rimraf dist && rm -f packagename-here.* && npm run build:lib && npm run build:pack",
@@ -44,8 +50,8 @@
     "storybook": "^8.0.5",
     "typescript": "^5.4.2",
     "unplugin-fonts": "^1.1.1",
-    "unplugin-vue-components": "^0.26.0",
     "vite": "^5.1.5",
+    "vite-plugin-dts": "^3.8.1",
     "vite-plugin-vue-facing-decorator-hmr": "^1.0.1",
     "vite-plugin-vuetify": "^2.0.3",
     "vue-facing-decorator": "^3.0.4",

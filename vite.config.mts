@@ -1,5 +1,5 @@
 // Plugins
-import Components from 'unplugin-vue-components/vite'
+// import Components from 'unplugin-vue-components/vite'
 import Vue from '@vitejs/plugin-vue'
 import Vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
 import ViteFonts from 'unplugin-fonts/vite'
@@ -8,17 +8,18 @@ import vueFacingDecoratorHmr from "vite-plugin-vue-facing-decorator-hmr";
 // Utilities
 import { defineConfig } from 'vite'
 import { fileURLToPath, URL } from 'node:url'
-import * as path from "node:path";
+import {resolve} from "node:path";
+import dts from 'vite-plugin-dts'
 
 // https://vitejs.dev/config/
 export default defineConfig({
   build: {
     lib: {
-      entry: path.resolve(__dirname, 'src/index.ts'),
+      entry: resolve(__dirname, 'src/index.ts'),
       formats: [
         'es',
-        'esm',
-        'umd',
+        // 'esm',
+        // 'umd',
       ],
       // #INSTALL change these names
       name: 'vue-vuetify-lib',
@@ -34,9 +35,6 @@ export default defineConfig({
         // 'vuex-facing-decorator',
       ],
       output: {
-        // file: 'dist/index.js',
-        // entryFileNames: [],
-        // format: 'esm',
         globals: {
           vue: 'Vue',
           vuetify: "Vuetify",
@@ -53,7 +51,7 @@ export default defineConfig({
     }),
     // https://github.com/vuetifyjs/vuetify-loader/tree/master/packages/vite-plugin#readme
     Vuetify(),
-    Components(),
+    // Components(),
     ViteFonts({
       google: {
         families: [{
@@ -62,7 +60,8 @@ export default defineConfig({
         }],
       },
     }),
-    vueFacingDecoratorHmr()
+    vueFacingDecoratorHmr(),
+    dts(),
   ],
   define: { 'process.env': {} },
   resolve: {

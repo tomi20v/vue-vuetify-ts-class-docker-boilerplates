@@ -21,11 +21,15 @@
     "forceConsistentCasingInFileNames": true,
     "isolatedModules": true,
     "skipLibCheck": true,
-    "experimentalDecorators": true
+    "experimentalDecorators": true,
+    "declaration": true,
+    "importHelpers": true,
+    "sourceMap": true
   },
   "include": [
-    "./src/typed-router.d.ts",
-    "components.d.ts"
+//    "src/**/*.vue",
+//    "src/**/*.ts",
+//    "components.d.ts"
   ],
   "exclude": ["dist", "node_modules", "cypress"],
   "references": [{ "path": "./tsconfig.node.json" }]

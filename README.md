@@ -1,6 +1,6 @@
 # vue-vuetify-ts-class-docker-boilerplates
 
-# Vue3 + Vuetify3 + typescript + class components boilerplates 
+# Vue3 + Vuetify3 + typescript + class components + docker boilerplates 
 
 Based on the original Vuetify 3 scaffold, various flavors
 
@@ -15,21 +15,36 @@ Based on the original Vuetify 3 scaffold, various flavors
 
 ## Flavors
 
+- each flavor suits different needs as per type of app to build, eg. vue-buetify-lib serves as boilerplate to build
+    libs with vue 3 and vuetify 3, and includes storybook for UI element testing
+- flavors are separated on branches, see below
+- universal transparent npm commands - ```npm run start``` and ```npm run serve``` are available in all flavors and
+    serve to run the container in production/development mode
+
 ### with vuex - because separating actions from mutations is important
+```git checkout vue-vuetify-vuex```
 
 - vuex 4
 - vuex-facing-decorator
 
-### with storybook (planned)
+### with storybook and vuex
+```git checkout vue-vuetify-storybook```
 
 - vuex 4
 - vuex-facing-decorator
 - storybook 8
 
+### for building UI libs, with vuetify and storybook
+```git checkout vue-vuetify-lib```
+
+- storybook 8
+- builds .tgz artifact
+- runs storybook in dev mode by default
+
 ## 💿 Install
 
 - clone/fork
-- checkout the branch of the flavour
+- checkout the branch of the desired flavor
 - start up the container ```docker-compose up```
 
 After completing the installation, your environment is ready for development.

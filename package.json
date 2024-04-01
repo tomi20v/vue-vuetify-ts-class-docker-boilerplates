@@ -1,10 +1,12 @@
 {
-  "name": "bonomo",
+  "name": "vue-vuetify-ts-class-docker-boilerplates",
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite --host",
+    "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
+    "serve": "vite",
+    "start": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },

@@ -1,14 +1,13 @@
 version: "3.6"
 services:
   bonomo3:
-    image: node:20-alpine
-#    build:
-#      context: .
-    working_dir: /app/
-    entrypoint: /bin/ash
-    ports:
-#      - 6006:6006
-      - 6007:6007
+    build:
+      context: .
+      dockerfile: ./docker/Dockerfile
+    container_name: vue-vuetify-boilerplate
+    # uncomment following line to start container in dev mode with hot reload
+#    command: [ "npm", "run", "serve" ]
+    tty: true
     volumes:
       - .:/app/
-    tty: true
+    working_dir: /app/

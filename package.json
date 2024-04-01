@@ -4,11 +4,11 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
+    "build:storybook": "storybook build",
     "preview": "vite preview",
     "serve": "vite",
-    "start": "vite preview",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "serve:storybook": "storybook dev -p 6006",
+    "start": "vite preview"
   },
   "dependencies": {
     "@mdi/font": "6.2.95",

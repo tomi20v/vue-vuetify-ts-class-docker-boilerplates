@@ -1,9 +1,9 @@
 {
   "name": "vue-vuetify-lib",
-  "version": "0.0.9",
+  "version": "0.1.4",
   "private": true,
   "main": "dist/index.js",
-  "_module": "./dist/index.js",
+  "module": "dist/index.js",
   "_exports": {
     ".": {
       "import": "./dist/index.esm.js",
@@ -52,7 +52,6 @@
     "unplugin-fonts": "^1.1.1",
     "vite": "^5.1.5",
     "vite-plugin-dts": "^3.8.1",
-    "vite-plugin-vue-facing-decorator-hmr": "^1.0.1",
     "vite-plugin-vuetify": "^2.0.3",
     "vue-facing-decorator": "^3.0.4",
     "vue-tsc": "^2.0.6"

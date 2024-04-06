@@ -3,7 +3,7 @@
 import Vue from '@vitejs/plugin-vue'
 import Vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
 import ViteFonts from 'unplugin-fonts/vite'
-import vueFacingDecoratorHmr from "vite-plugin-vue-facing-decorator-hmr";
+// import vueFacingDecoratorHmr from "vite-plugin-vue-facing-decorator-hmr";
 
 // Utilities
 import { defineConfig } from 'vite'
@@ -60,7 +60,7 @@ export default defineConfig({
         }],
       },
     }),
-    vueFacingDecoratorHmr(),
+    // vueFacingDecoratorHmr(),
     dts(),
   ],
   define: { 'process.env': {} },

@@ -1,6 +1,6 @@
 <template>
   <v-card>
-    <v-card-title>#1 Sample prop: {{someProp}}</v-card-title>
+    <v-card-title>#2 Sample prop: {{someProp}}</v-card-title>
     <v-card-text>
       <section>
         <p>dialog showing = {{ showing }}</p>
@@ -26,8 +26,8 @@
 import {Component, Prop, toNative, Vue} from 'vue-facing-decorator'
 
 @Component
-class HelloWorldLib extends Vue {
-// export default class HelloWorldLib extends Vue {
+class HelloWorldLib2 extends Vue {
+// export default class HelloWorldLib2 extends Vue {
 
   @Prop()
   someProp!: string;
@@ -42,6 +42,6 @@ class HelloWorldLib extends Vue {
 
 }
 
-export default toNative(HelloWorldLib);
+export default toNative(HelloWorldLib2);
 
 </script>
